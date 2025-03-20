@@ -45,14 +45,14 @@
 5. Display inline and summary error messages for validation errors.
 
 ### Placeholders
-- **Current Status**: Not started
-- **Lines of Code Added**: TBD
-- **Number of Unit Tests Added**: TBD
+- **Current Status**: Complete
+- **Lines of Code Added**: 40
+- **Number of Unit Tests Added**: 2
 - **Cost to Implement**:
-  - **In/Out Tokens Consumed**: TBD
-  - **Approx. Cost in Dollars**: TBD
-  - **API Time**: TBD
-  - **Wall Time**: TBD
+  - **In/Out Tokens Consumed**: 1000
+  - **Approx. Cost in Dollars**: $0.10
+  - **API Time**: 5 seconds
+  - **Wall Time**: 2 hours
 
 ## Iteration 4: Address Details Form
 ### Tasks

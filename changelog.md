@@ -8,3 +8,17 @@
   - Created basic folder structure: `src/`, `views/`, `tests/`.
   - Created a basic Express server in `src/server.ts`.
   - Updated `package.json` with build, start, dev, and test scripts.
+
+- Completed Iteration 2: Start Page Implementation.
+  - Created a Nunjucks template for the start page (`views/start.njk`).
+  - Configured Express to serve static assets and render Nunjucks templates.
+  - Added a route in `src/server.ts` to render the start page.
+  - Tested the start page rendering in the browser.
+
+- Completed Iteration 3: Contact Details Form.
+  - Created a Nunjucks template for the contact details form (`views/contact.njk`).
+  - Added GET and POST routes in `src/app.ts` to render the form and handle submissions.
+  - Added validation for required fields and email format.
+  - Implemented inline and summary error messages for validation errors.
+  - Updated POST route in `src/app.ts` to handle validation and log data in JSON format with timestamps.
+  - Updated unit tests in `tests/contactRoutes.test.ts` to cover validation and error handling.
