@@ -106,4 +106,14 @@ app.get('/summary', (req, res) => {
   res.render('summary.njk', { contact, address });
 });
 
+// Add navigation from summary page to submitted page
+app.post('/summary', (req, res) => {
+  res.redirect('/submitted');
+});
+
+// Route to render the submitted page
+app.get('/submitted', (req, res) => {
+  res.render('submitted.njk');
+});
+
 export default app;

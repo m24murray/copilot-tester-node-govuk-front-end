@@ -17,6 +17,9 @@
 - **Summary Page**: A page to display the submitted contact and address details.
   - Displays the collected information in a summary format.
   - Provides a button to submit the details.
+- **Submitted Page**: A confirmation page displayed after the user submits their details.
+  - Displays a confirmation message indicating successful submission.
+  - Provides a button to return to the start page.
 
 ### How to Run
 1. Install dependencies:
