@@ -1,0 +1,16 @@
+{% extends "template.njk" %}
+{% from "components/header/macro.njk" import govukHeader %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/govuk-frontend.min.css">
+{% endblock %}
+
+{% block pageTitle %}Register short term lets{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "#",
+    serviceName: "Register Short Term Lets",
+    serviceUrl: "#"
+  }) }}
+{% endblock %}

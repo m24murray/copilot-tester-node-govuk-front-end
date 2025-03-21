@@ -1,44 +1,60 @@
-{% extends "template.njk" %}
-{% block head %}
-    <link rel="stylesheet" href="/assets/govuk-frontend.min.css">
-{% endblock %}
+{% extends "base.njk" %}
+
+{% from "components/summary-list/macro.njk" import govukSummaryList %}
+
 {% block content %}
-<h1 class="govuk-heading-l">Summary</h1>
-<div class="govuk-form-group">
-  <label class="govuk-label">Full Name:</label>
-  <p class="govuk-body">{{ contact.fullName }}</p>
-</div>
-<div class="govuk-form-group">
-  <label class="govuk-label">Email:</label>
-  <p class="govuk-body">{{ contact.email }}</p>
-</div>
-<div class="govuk-form-group">
-  <label class="govuk-label">Contact Number:</label>
-  <p class="govuk-body">{{ contact.contactNumber }}</p>
-</div>
-<div class="govuk-form-group">
-  <label class="govuk-label">Address Line 1:</label>
-  <p class="govuk-body">{{ address.addressLine1 }}</p>
-</div>
-<div class="govuk-form-group">
-  <label class="govuk-label">Address Line 2:</label>
-  <p class="govuk-body">{{ address.addressLine2 }}</p>
-</div>
-<div class="govuk-form-group">
-  <label class="govuk-label">Postcode:</label>
-  <p class="govuk-body">{{ address.postcode }}</p>
-</div>
-<div class="govuk-form-group">
-  <label class="govuk-label">City:</label>
-  <p class="govuk-body">{{ address.city }}</p>
-</div>
-<div class="govuk-form-group">
-  <label class="govuk-label">Town:</label>
-  <p class="govuk-body">{{ address.town }}</p>
-</div>
-<div class="govuk-form-group">
-  <label class="govuk-label">Country:</label>
-  <p class="govuk-body">{{ address.country }}</p>
-</div>
-<a class="govuk-button" href="/submitted">Submit</a>
+  <h1 class="govuk-heading-l">Summary</h1>
+  <p class="govuk-body">Review your details below:</p>
+  {{ govukSummaryList({
+    rows: [
+      {
+        key: { text: "Full Name" },
+        value: { text: contact.fullName },
+        actions: { items: [{ href: "/contact", text: "Change", visuallyHiddenText: "full name" }] }
+      },
+      {
+        key: { text: "Email" },
+        value: { text: contact.email },
+        actions: { items: [{ href: "/contact", text: "Change", visuallyHiddenText: "email" }] }
+      },
+      {
+        key: { text: "Contact Number" },
+        value: { text: contact.contactNumber },
+        actions: { items: [{ href: "/contact", text: "Change", visuallyHiddenText: "contact number" }] }
+      },
+      {
+        key: { text: "Address Line 1" },
+        value: { text: address.addressLine1 },
+        actions: { items: [{ href: "/address", text: "Change", visuallyHiddenText: "address line 1" }] }
+      },
+      {
+        key: { text: "Address Line 2" },
+        value: { text: address.addressLine2 },
+        actions: { items: [{ href: "/address", text: "Change", visuallyHiddenText: "address line 2" }] }
+      },
+      {
+        key: { text: "Postcode" },
+        value: { text: address.postcode },
+        actions: { items: [{ href: "/address", text: "Change", visuallyHiddenText: "postcode" }] }
+      },
+      {
+        key: { text: "City" },
+        value: { text: address.city },
+        actions: { items: [{ href: "/address", text: "Change", visuallyHiddenText: "city" }] }
+      },
+      {
+        key: { text: "Town" },
+        value: { text: address.town },
+        actions: { items: [{ href: "/address", text: "Change", visuallyHiddenText: "town" }] }
+      },
+      {
+        key: { text: "Country" },
+        value: { text: address.country },
+        actions: { items: [{ href: "/address", text: "Change", visuallyHiddenText: "country" }] }
+      }
+    ]
+  }) }}
+  <form action="/summary" method="post">
+    <button type="submit" class="govuk-button">Submit</button>
+  </form>
 {% endblock %}
