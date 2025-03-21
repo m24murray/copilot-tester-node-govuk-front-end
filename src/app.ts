@@ -57,7 +57,7 @@ app.post(
       contactNumber,
     });
 
-    res.redirect('/summary');
+    res.redirect('/address');
   }
 );
 
