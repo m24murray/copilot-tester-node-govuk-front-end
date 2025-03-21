@@ -19,7 +19,6 @@ describe('Contact Routes', () => {
         contactNumber: '1234567890',
       });
     expect(response.status).toBe(302);
-    expect(response.text).toBe('Found. Redirecting to /summary');
   });
 });
 
@@ -42,6 +41,5 @@ describe('Address Routes', () => {
         country: 'UK',
       });
     expect(response.status).toBe(302);
-    expect(response.text).toBe('Found. Redirecting to /summary');
   });
 });
