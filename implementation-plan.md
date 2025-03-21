@@ -96,3 +96,11 @@
 3. Implement navigation from the summary page to the submitted page.
 
 ### Placeholders
+- **Current Status**: Complete
+- **Lines of Code Added**: 20
+- **Number of Unit Tests Added**: 0
+- **Cost to Implement**:
+  - **In/Out Tokens Consumed**: 500
+  - **Approx. Cost in Dollars**: $0.05
+  - **API Time**: 2 seconds
+  - **Wall Time**: 1 hour

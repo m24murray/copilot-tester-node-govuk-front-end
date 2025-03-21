@@ -31,3 +31,12 @@
   - Implemented inline and summary error messages for validation errors.
   - Updated POST route in `src/app.ts` to handle validation and log data in JSON format with timestamps.
   - Added unit tests in `tests/contactRoutes.test.ts` to cover validation and error handling for the address form.
+- Completed Iteration 5: Summary Page.
+  - Created a Nunjucks template for the summary page (`views/summary.njk`).
+  - Added a route in `src/app.ts` to render the summary page.
+  - Implemented navigation from the contact and address forms to the summary page.
+  - Ensured the start page redirects to the contact page, the contact page redirects to the address page, and the address page redirects to the summary page.
+- Completed Iteration 6: Submitted Page.
+  - Created a Nunjucks template for the submitted page (`views/submitted.njk`).
+  - Added a route in `src/app.ts` to render the submitted page.
+  - Implemented navigation from the summary page to the submitted page.
