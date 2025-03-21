@@ -28,3 +28,20 @@
    npm run dev
    ```
 3. Open your browser and navigate to `http://localhost:3000` to view the application.
+
+## Domain Models
+
+The application includes the following domain models:
+
+### Contact
+- `fullName`: string
+- `email`: string
+- `contactNumber`: string
+
+### Address
+- `addressLine1`: string
+- `addressLine2?`: string (optional)
+- `postcode`: string
+- `city`: string
+- `town?`: string (optional)
+- `country`: string
