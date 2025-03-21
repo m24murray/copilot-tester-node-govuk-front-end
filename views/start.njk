@@ -1,21 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Short Term Lets</title>
-    <link rel="stylesheet" href="/assets/govuk-frontend.min.css">
-</head>
-<body>
-    <header class="govuk-header" role="banner">
-        <div class="govuk-header__container">
-            <h1 class="govuk-header__logo">Register Short Term Lets</h1>
-        </div>
-    </header>
-    <main class="govuk-main-wrapper" id="main-content" role="main">
+{% extends "base.njk" %}
+
+{% block content %}
         <h1 class="govuk-heading-l">Welcome to the Register Short Term Lets Service</h1>
-        <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id odio tincidunt tincidunt.</p>
+        <p class="govuk-body">This service allows you to register a short term let.</p>
         <a href="/contact" class="govuk-button">Start now</a>
-    </main>
-</body>
-</html>
+{% endblock %}

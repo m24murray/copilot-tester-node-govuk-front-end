@@ -1,7 +1,11 @@
-{% extends "template.njk" %}
+{% extends "base.njk" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/govuk-frontend.min.css">
+{% endblock %}
 
 {% block content %}
-  <h1>Submission Successful</h1>
-  <p>Your details have been submitted successfully.</p>
+  <h1 class="govuk-heading-l">Submission Successful</h1>
+  <p class="govuk-body">Your details have been submitted successfully.</p>
   <a href="/" class="govuk-button">Return to Start Page</a>
 {% endblock %}
