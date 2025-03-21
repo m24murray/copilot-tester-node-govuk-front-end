@@ -61,4 +61,40 @@ app.post(
   }
 );
 
+// Route to render the address details form
+app.get('/address', (req, res) => {
+  res.render('address.njk');
+});
+
+// Add validation and error handling for the address form
+app.post(
+  '/address',
+  [
+    check('addressLine1').notEmpty().withMessage('Address Line 1 is required'),
+    check('postcode').matches(/[A-Z]{1,2}[0-9R][0-9A-Z]? ?[0-9][ABD-HJLNP-UW-Z]{2}/).withMessage('Valid UK postcode is required'),
+    check('city').notEmpty().withMessage('City is required'),
+    check('country').notEmpty().withMessage('Country is required'),
+  ],
+  (req: Request, res: Response) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).render('address.njk', {
+        errors: errors.array(),
+        data: req.body,
+      });
+    }
+    const { addressLine1, addressLine2, postcode, city, town, country } = req.body;
+    console.log({
+      timestamp: new Date().toISOString(),
+      addressLine1,
+      addressLine2,
+      postcode,
+      city,
+      town,
+      country,
+    });
+    res.redirect('/summary');
+  }
+);
+
 export default app;

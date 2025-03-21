@@ -22,3 +22,26 @@ describe('Contact Routes', () => {
     expect(response.text).toBe('Found. Redirecting to /summary');
   });
 });
+
+describe('Address Routes', () => {
+  it('should render the address form', async () => {
+    const response = await request(app).get('/address');
+    expect(response.status).toBe(200);
+    expect(response.text).toContain('<h1 class="govuk-heading-l">Address Details</h1>');
+  });
+
+  it('should handle form submission', async () => {
+    const response = await request(app)
+      .post('/address')
+      .send({
+        addressLine1: '123 Main St',
+        addressLine2: 'Apt 4B',
+        postcode: 'SW1A 1AA',
+        city: 'London',
+        town: 'Westminster',
+        country: 'UK',
+      });
+    expect(response.status).toBe(302);
+    expect(response.text).toBe('Found. Redirecting to /summary');
+  });
+});

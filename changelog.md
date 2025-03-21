@@ -22,3 +22,12 @@
   - Implemented inline and summary error messages for validation errors.
   - Updated POST route in `src/app.ts` to handle validation and log data in JSON format with timestamps.
   - Updated unit tests in `tests/contactRoutes.test.ts` to cover validation and error handling.
+
+## [21 March 2025]
+- Completed Iteration 4: Address Details Form.
+  - Created a Nunjucks template for the address details form (`views/address.njk`).
+  - Added GET and POST routes in `src/app.ts` to render the form and handle submissions.
+  - Added validation for required fields and UK postcode format.
+  - Implemented inline and summary error messages for validation errors.
+  - Updated POST route in `src/app.ts` to handle validation and log data in JSON format with timestamps.
+  - Added unit tests in `tests/contactRoutes.test.ts` to cover validation and error handling for the address form.
