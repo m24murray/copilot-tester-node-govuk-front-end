@@ -9,3 +9,8 @@
 * Knew what to do to use the govuk template but could not get the correct file path, node modules not in scope.
 * Lost context of conversation mid iteration.
 * 
+
+* Continue to iterate?
+Copilot has been working on this problem for a while. It can continue to iterate, or you can send a new message to refine your prompt.
+
+* if you cancel in the chat, you are better writing a prompt to correct.

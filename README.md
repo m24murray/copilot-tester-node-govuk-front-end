@@ -10,6 +10,10 @@
   - Includes validation for required fields and email format.
   - Displays inline and summary error messages for validation errors.
   - Logs submitted data in JSON format with timestamps.
+- **Address Details Form**: A form to collect user address details (address line 1, address line 2, postcode, city, town, and country).
+  - Includes validation for required fields and UK postcode format.
+  - Displays inline and summary error messages for validation errors.
+  - Logs submitted data in JSON format with timestamps.
 
 ### How to Run
 1. Install dependencies:
