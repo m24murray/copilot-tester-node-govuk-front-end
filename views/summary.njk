@@ -1,0 +1,44 @@
+{% extends "template.njk" %}
+{% block head %}
+    <link rel="stylesheet" href="/assets/govuk-frontend.min.css">
+{% endblock %}
+{% block content %}
+<h1 class="govuk-heading-l">Summary</h1>
+<div class="govuk-form-group">
+  <label class="govuk-label">Full Name:</label>
+  <p class="govuk-body">{{ contact.fullName }}</p>
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label">Email:</label>
+  <p class="govuk-body">{{ contact.email }}</p>
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label">Contact Number:</label>
+  <p class="govuk-body">{{ contact.contactNumber }}</p>
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label">Address Line 1:</label>
+  <p class="govuk-body">{{ address.addressLine1 }}</p>
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label">Address Line 2:</label>
+  <p class="govuk-body">{{ address.addressLine2 }}</p>
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label">Postcode:</label>
+  <p class="govuk-body">{{ address.postcode }}</p>
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label">City:</label>
+  <p class="govuk-body">{{ address.city }}</p>
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label">Town:</label>
+  <p class="govuk-body">{{ address.town }}</p>
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label">Country:</label>
+  <p class="govuk-body">{{ address.country }}</p>
+</div>
+<a class="govuk-button" href="/submitted">Submit</a>
+{% endblock %}
