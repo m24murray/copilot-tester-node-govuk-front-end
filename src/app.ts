@@ -17,9 +17,8 @@ nunjucks.configure([
 
 // Middleware to parse JSON
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// Serve GOV.UK Design System CSS node_modules/govuk-frontend/dist/govuk/govuk-frontend.min.css
-console.log(path.join(__dirname, '../node_modules/govuk-frontend/dist/govuk'));
 app.use('/assets', express.static(path.join(__dirname, '../static')));
 
 // Route for the start page
@@ -42,6 +41,7 @@ app.post(
   ],
   (req: Request, res: Response) => {
     const errors = validationResult(req);
+
     if (!errors.isEmpty()) {
       return res.status(400).render('contact.njk', {
         errors: errors.array(),

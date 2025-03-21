@@ -24,3 +24,8 @@ Upon developing each iteration, I want you to do the following:
 5. Perform a git commit for all the files added/changed. Generate a suitable commit message based upon the changes for that iteration.
 6. Push to git remote.
 7. Do not make any further changes. Stop, provide a short summary of the changes and ask me to manually test. I will prompt you to continue when I am ready.
+## Git Instructions
+When I ask you to push the changes do the folllowing
+1. Create a new branch, use a good description for the changes that have been made.
+2. Add and commit the changes, use a descriptive commit message.
+3. Push to remote.
