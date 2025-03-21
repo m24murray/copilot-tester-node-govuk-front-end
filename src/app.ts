@@ -3,8 +3,25 @@ import path from 'path';
 import nunjucks from 'nunjucks';
 const { check, validationResult } = require('express-validator');
 import { Request, Response } from 'express';
+import session from 'express-session';
+
+// Extend the session interface to include contact and address properties
+declare module 'express-session' {
+  interface SessionData {
+    contact: { [key: string]: any };
+    address: { [key: string]: any };
+  }
+}
 
 const app = express();
+
+// Configure session middleware
+app.use(session({
+  secret: 'your-secret-key',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false } // Set to true if using HTTPS
+}));
 
 // Configure Nunjucks for template rendering
 nunjucks.configure([
@@ -49,14 +66,7 @@ app.post(
       });
     }
 
-    const { fullName, email, contactNumber } = req.body;
-    console.log({
-      timestamp: new Date().toISOString(),
-      fullName,
-      email,
-      contactNumber,
-    });
-
+    req.session.contact = req.body;
     res.redirect('/address');
   }
 );
@@ -83,18 +93,16 @@ app.post(
         data: req.body,
       });
     }
-    const { addressLine1, addressLine2, postcode, city, town, country } = req.body;
-    console.log({
-      timestamp: new Date().toISOString(),
-      addressLine1,
-      addressLine2,
-      postcode,
-      city,
-      town,
-      country,
-    });
+    req.session.address = req.body;
     res.redirect('/summary');
   }
 );
+
+// Route to render the summary page
+app.get('/summary', (req, res) => {
+  const contact = req.session.contact;
+  const address = req.session.address;
+  res.render('summary.njk', { contact, address });
+});
 
 export default app;

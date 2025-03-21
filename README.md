@@ -14,6 +14,9 @@
   - Includes validation for required fields and UK postcode format.
   - Displays inline and summary error messages for validation errors.
   - Logs submitted data in JSON format with timestamps.
+- **Summary Page**: A page to display the submitted contact and address details.
+  - Displays the collected information in a summary format.
+  - Provides a button to submit the details.
 
 ### How to Run
 1. Install dependencies:

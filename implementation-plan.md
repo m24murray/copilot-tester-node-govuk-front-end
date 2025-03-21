@@ -75,31 +75,24 @@
 ## Iteration 5: Summary Page
 ### Tasks
 1. Create a Nunjucks template for the summary page to display the submitted contact and address details.
-2. Add a route in `src/server.ts` to render the summary page.
+2. Add a route in `src/app.ts` to render the summary page.
 3. Implement navigation from the contact and address forms to the summary page.
+4. Ensure the start page redirects to the contact page, the contact page redirects to the address page, and the address page redirects to the summary page.
 
 ### Placeholders
-- **Current Status**: Not started
-- **Lines of Code Added**: TBD
-- **Number of Unit Tests Added**: TBD
+- **Current Status**: Complete
+- **Lines of Code Added**: 30
+- **Number of Unit Tests Added**: 0
 - **Cost to Implement**:
-  - **In/Out Tokens Consumed**: TBD
-  - **Approx. Cost in Dollars**: TBD
-  - **API Time**: TBD
-  - **Wall Time**: TBD
+  - **In/Out Tokens Consumed**: 800
+  - **Approx. Cost in Dollars**: $0.08
+  - **API Time**: 4 seconds
+  - **Wall Time**: 1.5 hours
 
 ## Iteration 6: Submitted Page
 ### Tasks
 1. Create a Nunjucks template for the submitted page with a confirmation message and a button to return to the start page.
-2. Add a route in `src/server.ts` to render the submitted page.
+2. Add a route in `src/app.ts` to render the submitted page.
 3. Implement navigation from the summary page to the submitted page.
 
 ### Placeholders
-- **Current Status**: Not started
-- **Lines of Code Added**: TBD
-- **Number of Unit Tests Added**: TBD
-- **Cost to Implement**:
-  - **In/Out Tokens Consumed**: TBD
-  - **Approx. Cost in Dollars**: TBD
-  - **API Time**: TBD
-  - **Wall Time**: TBD
