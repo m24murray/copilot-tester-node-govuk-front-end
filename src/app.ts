@@ -4,12 +4,13 @@ import nunjucks from 'nunjucks';
 const { check, validationResult } = require('express-validator');
 import { Request, Response } from 'express';
 import session from 'express-session';
+import { Contact, Address } from './models';
 
 // Extend the session interface to include contact and address properties
 declare module 'express-session' {
   interface SessionData {
-    contact: { [key: string]: any };
-    address: { [key: string]: any };
+    contact: Contact;
+    address: Address;
   }
 }
 
@@ -66,7 +67,7 @@ app.post(
       });
     }
 
-    req.session.contact = req.body;
+    req.session.contact = req.body as Contact;
     res.redirect('/address');
   }
 );
@@ -93,7 +94,7 @@ app.post(
         data: req.body,
       });
     }
-    req.session.address = req.body;
+    req.session.address = req.body as Address;
     res.redirect('/summary');
   }
 );
